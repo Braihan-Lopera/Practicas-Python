@@ -1,21 +1,29 @@
-num1 = int(input("Ingrese el primer número entero: "))
-num2 = int(input("Ingrese el segundo numero: "))
+bandera = True
 
-operation = str(input("ingrese la operacion a realizar(+, -, *, /): "))
-while True:
-    if operation == "+":
-        sum = num1 + num2
-        print("Resultado: " , sum)
-    elif operation == "-":
-        rest = num1 - num2
-        print("Resultado: " , rest)
-    elif operation == "*":
-        mult = num1 * num2
-        print("Resultado: " , mult)
-    elif operation == "/":
-        div = num1 / num2
-        print("Resultado: " , div)
+def calculadora(a, b):
+        operador = str(input("Operacion a realizar:"))
+        if operador  == "+":
+            return print("Resultado:", a + b)
+        elif operador == "*":
+            return print("Resultado:", a * b)
+        elif operador == "-":
+            return print("Resultado:", a - b)
+        elif operador == "/":
+            return print("Resultado:", a / b)
+        elif operador == "%":
+            return print("Resultado:", a % b)
+        else:
+            return print("Operacion invalida!")
+
+while bandera:
+    num1 = float(input("Ingrese el numero: "))
+    num2 = float(input("ingrese el otro numero: "))
+    user = calculadora(num1, num2)
+    salida = str(input("Desea salir? (SI/NO): ")).lower()
+    print(salida)
+    if salida == "si":
+            bandera = False
+    elif salida == "no":
+            continue
     else:
         print("Valor incorrecto")
-        break
-
