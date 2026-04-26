@@ -7,7 +7,6 @@ from app.services.cliente_service import ClienteService
 router = APIRouter()
 cliente_service = ClienteService()
 
-@router.post("/clientes")
+@router.post("/clientes", response_model=ClienteSchema)
 def crear_cliente(peticion:ClienteSchema):
     return cliente_service.crear_cliente(peticion)
-

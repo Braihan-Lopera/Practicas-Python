@@ -25,5 +25,6 @@ class EquipoRepository:
         with open(ruta, "w") as file:
             json.dump(equipos, file, indent=4)
         return nuevo_equipo
-    
+
+    def traer_equipo_por_id(self, )
     

@@ -8,3 +8,5 @@ equipo_service = EquipoService()
 @router.post("/equipo")
 def crear_equipo(peticion:EquipoSchema):
     return equipo_service.crear_equipo(peticion)
+
+

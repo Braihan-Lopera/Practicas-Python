@@ -1,6 +1,7 @@
 from app.schemas.equipo_schema import EquipoSchema
 from app.repositories.equipo_repository import EquipoRepository
 from app.repositories.cliente_repository import ClienteRepository
+from sqlalchemy.orm import Session
 
 class EquipoService:
     def __init__(self):
@@ -16,4 +17,7 @@ class EquipoService:
         nuevo_equipo = self.equipo_repository.crear_equipo_json(peticion, id_cliente)
 
         return {"message": "equipo creado exitosamete", "data": nuevo_equipo}
+    
+    def traer_equipo_por_id(self, db:Session, equipo_id:int)
+        
         

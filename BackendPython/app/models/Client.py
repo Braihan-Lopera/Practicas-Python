@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from datetime import date
 
 @dataclass
-class Cliente:
+class Client:
     id:int
     nombre:str
     correo:str
